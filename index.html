@@ -202,7 +202,7 @@
     }
 
     .result-box{
-      display:none;
+      display:block;
       margin-top:15px;
       padding:13px;
       border-radius:15px;
@@ -210,6 +210,10 @@
       border:1px solid #fde68a;
       color:#78350f;
       font-weight:800;
+    }
+
+    .score-text{
+      margin-top:10px;
     }
 
     .btn-row{
@@ -242,6 +246,29 @@
       color:#111827;
     }
 
+    .top-nav{
+      position:fixed;
+      right:16px;
+      bottom:18px;
+      z-index:9999;
+      width:52px;
+      height:52px;
+      border-radius:999px;
+      background:var(--blue);
+      color:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-decoration:none;
+      font-size:24px;
+      font-weight:900;
+      box-shadow:0 12px 28px rgba(37,99,235,.35);
+    }
+
+    .top-nav:hover{
+      background:var(--blue2);
+    }
+
     .footer{
       text-align:center;
       margin-top:28px;
@@ -255,10 +282,11 @@
       .section{padding:14px}
       .question{padding:13px}
       .option{font-size:14px}
+      .top-nav{right:12px;bottom:12px;width:48px;height:48px;font-size:22px}
     }
   </style>
 </head>
-<body>
+<body id="top">
   <header>
     <h1>Бастауыш сыныптарда математиканы оқыту әдістемесі</h1>
     <p>5-кітап: 1–4-сыныптарға арналған «Математика» пәнінен үлгілік оқу бағдарламасы бойынша КТ дайындық тесттері</p>
@@ -2082,7 +2110,8 @@
             answer: [0],
             explanation: "1-сыныпта геометриялық фигуралар арасындағы негізгі қатынастар үлкен-кіші, жоғары-төмен, кең-тар, жуан-жіңішке, қалың-жұқа сияқты кеңістіктік және салыстырмалы ұғымдар арқылы беріледі."
           },
-          {
+
+              {
             type: "single",
             question: "2-сыныпта қозғалыс бағыты мен бұрылу мазмұны қандай әрекетпен байланысты?",
             options: [
@@ -4188,6 +4217,7 @@
 
     renderQuiz();
   </script>
+  <a href="#top" class="top-nav" aria-label="Жоғары көтерілу">↑</a>
 </body>
 </html>
           
